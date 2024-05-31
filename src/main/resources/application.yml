@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: board
+
+
+
+    datasource:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@localhost:1521/xe
+      username: ERP
+      password: java1234
+
+    # XML Mapper Locations
+    mybatis:
+        mapper-locations: classpath:/mapper/*.xml
+
+    jpa:
+      database: oracle
+      generate-ddl: false
+      hibernate:
+        ddl-auto: update
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true #이쁘게
+
